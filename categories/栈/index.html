@@ -1624,7 +1624,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1664255622038),
+    lastupdate: new Date(1664544543411),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2392,7 +2392,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/26/栈偏移/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/26/栈迁移/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Chen">
   </span>
@@ -2410,12 +2410,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/26/%E6%A0%88%E5%81%8F%E7%A7%BB/"  itemprop="url">
-        栈偏移
+      <a href="/2022/09/26/%E6%A0%88%E8%BF%81%E7%A7%BB/"  itemprop="url">
+        栈迁移
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
+    
+      
+        我们在基础知识扩展的时候，说到了为了避免有些题目供我们构造的字节数过少，以至于无法给system函数传参的时候该怎么解决
+今天所要讲到的内容，也是和栈溢出字节数不够有关
+当可以供我们编写的字节数仅够覆盖到ret addr时，并且该程序内并没有后门函数可以供我们利用，我们又该如何实现系统调用呢？
+我们以往的简单栈溢出是通过覆盖ret addr的办法控制程序执行流导向后门函数的位置
+但是其本质上...
+      
     
   </div>
   
@@ -2435,7 +2443,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       </div>
       
         <div>
-          <a class='readmore' href='/2022/09/26/%E6%A0%88%E5%81%8F%E7%A7%BB/' itemprop="url">
+          <a class='readmore' href='/2022/09/26/%E6%A0%88%E8%BF%81%E7%A7%BB/' itemprop="url">
             Read More
           </a>
         </div>
@@ -3106,6 +3114,11 @@ R...
             title="/categories/%E6%A0%88/" href="/categories/%E6%A0%88/"
             active-action="action-categoriesE6A088"
             ><div class='name'>栈</div><div class='badge'>(9)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/" href="/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"
+            active-action="action-categoriesE8999AE68B9FE69CBA"
+            ><div class='name'>虚拟机</div><div class='badge'>(3)</div></a></li>
         
       </ul>
     </div>
